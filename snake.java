@@ -6,7 +6,7 @@ public class snake{
 		JFrame obj=new JFrame();
 		play pl = new play();
 		obj.setBounds(10,10,800,800);
-		obj.setTitle("Snake Game");
+		obj.setTitle("Snake Game.");
 		obj.setVisible(true);
 		obj.setResizable(false);
 		obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

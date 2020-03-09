@@ -50,7 +50,7 @@ public class play extends JPanel implements ActionListener, KeyListener{
 			if(stop==true){
 				g.setColor(Color.white);
 				g.setFont(new Font("serif",Font.BOLD,25));
-				g.drawString("Game Over Sore:"+Score,200,300);
+				g.drawString("Game Over Sore:"+Score,250,300);
 				g.setFont(new Font("serif",Font.BOLD,30));
 				g.drawString("Press Enter To Restart",230,350);	
 			}
@@ -149,70 +149,44 @@ public class play extends JPanel implements ActionListener, KeyListener{
 		repaint();
 	}
 	public void keyPressed(KeyEvent e){
-		if(e.getKeyCode()==KeyEvent.VK_RIGHT){
+		if((e.getKeyCode()==KeyEvent.VK_RIGHT)&&(!Left)){
 			if(stop==false){
 				if(!Right){
 				play++;
 				Right=true;
-				Left=false;
 				Up=false;
 				Down=false;
-			}else{
-				play++;
-				Left=false;
-				Up=false;
-				Down=false;
-				
 			}
 			}
 		}
-		if(e.getKeyCode()==KeyEvent.VK_LEFT){
+		if((e.getKeyCode()==KeyEvent.VK_LEFT)&&(!Right)){
 			if(stop==false){
 			if(!Left){
 				play++;
 				Left=true;
-				Right=false;
 				Up=false;
 				Down=false;
-			}else{
-			play++;
-			Right=false;
-			Up=false;
-			Down=false;	
-			}				
+			}			
 			}
 		}
-		if(e.getKeyCode()==KeyEvent.VK_UP){
+		if((e.getKeyCode()==KeyEvent.VK_UP)&&(!Down)){
 			if(stop==false){
 			if(!Up){
 				play++;
 				Left=false;
 				Up=true;
-				Down=false;
 				Right=false;
-			}else{
-				play++;
-				Left=false;
-				Right=false;
-				Down=false;
 			}
 			}
 		}
-		if(e.getKeyCode()==KeyEvent.VK_DOWN){
+		if((e.getKeyCode()==KeyEvent.VK_DOWN)&&(!Up)){
 			if(stop==false){
 			if(!Down){
 				play++;
 				Left=false;
-				Up=false;
 				Down=true;
 				Right=false;
-			}else{
-				play++;
-				Down=true;
-				Right=false;
-				Left=false;
-				Up=false;
-			}				
+			}			
 			}
 		}
 		if(e.getKeyCode()==KeyEvent.VK_ENTER){
